@@ -1,7 +1,6 @@
-import {Component} from '@angular/core';
-import {MatTableDataSource} from '@angular/material';
-import { MatSnackBarModule } from "@angular/material";
+import {Component, OnInit, ViewChild} from '@angular/core';
 
+import {MatPaginator,MatSort, MatTableDataSource} from '@angular/material';
 
 export interface PeriodicElement {
   name: string;
@@ -9,6 +8,7 @@ export interface PeriodicElement {
   weight: number;
   symbol: string;
 }
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -21,18 +21,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
   {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
 ];
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent {
-  title = 'app';
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+  
+@Component({
+  selector: 'clients',
+  templateUrl: './clients.component.html',
+  styleUrls: ['./clients.component.scss']
+})
+export class ClientsComponent implements OnInit {
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = ELEMENT_DATA;
+  constructor() {    
+    
   }
+
+  ngOnInit() {    
+    console.log(this.dataSource)
+  }
+
 
 }
