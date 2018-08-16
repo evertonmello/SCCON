@@ -36,6 +36,6 @@
     </mat-form-field>
     <mat-label class="lblCep">{{endereco}}</mat-label>
   </div>
-
-  <button mat-button  type="submit" class="btnCadt">Cadastrar</button>
+  <button *ngIf="!newClient"  mat-button  type="button" (click)="updateClient()" class="btnCadt">Alterar</button>
+  <button *ngIf="newClient" mat-button  type="submit" class="btnCadt">Cadastrar</button>
 </form>

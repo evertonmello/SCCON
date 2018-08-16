@@ -23,7 +23,7 @@ export class FichaComponent implements OnInit {
     })    
   }
 
-  setPage(page){
-    this.router.navigate(['/' + page]);
+  setPage(){
+    this.router.navigate(['/cadastro/' + this.client.id]);
   }
 }

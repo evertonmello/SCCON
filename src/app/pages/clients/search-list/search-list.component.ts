@@ -30,13 +30,8 @@ export class SearchListComponent implements OnInit {
     })
   }
 
-  editClient(id){
- /*    client.id = Math.random().toString(36).substr(2, 9) 
-    this.appService.saveClients(client).then((res) =>{
-      console.log(res)
-    }) */
+  editClient(id){ 
     this.router.navigate(['/ficha/'+id]);
-
   }
 
   applyFilter(filterValue: string) {

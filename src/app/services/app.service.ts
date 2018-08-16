@@ -59,6 +59,16 @@ export class AppService {
     .catch();
   }
 
+
+  updateClients(id,client){
+    return this.http
+    .put("http://localhost:3000/clients/"+id,client)
+    .toPromise()
+    .then(this.parseDate)
+    .catch();
+  }
+
+
   parseDate(data){
     var endereco = data;
     return endereco;
