@@ -50,18 +50,20 @@ export class FormComponent implements OnInit {
       nome:['', Validators.required],
       email:['', Validators.compose([Validators.required,Validators.email])],
       telefone:['', Validators.compose([Validators.required,Validators.pattern('^[0-9]{8,9}$')])],     
-      status:[''] 
+      status:[''],
     });   
   }
 
   setUpForm(id){
     this.appService.getClient(id).then((client) =>{      
       this.client = client;
+      this.cep = client.cep;
+
       this.formData.setValue({
         nome:client.nome,
         email:client.email,
         telefone:client.telefone,
-        status:client.status
+        status:client.status,
       });
     }) 
   }
@@ -82,14 +84,16 @@ export class FormComponent implements OnInit {
 
   updCep(cep){
     this.cep = cep
+    console.log(this.cep)
   }
   
   updateClient(){
-    console.log(this.formData)
     if(this.formData.valid){      
       var clientId = this.client.id;
-    
-      this.appService.updateClients(clientId, this.formData.value).then((res) =>{
+      var newClient = this.formData.value;
+      newClient.cep = this.cep;
+      
+      this.appService.updateClients(clientId, newClient).then((res) =>{
         this.endereco = res.logradouro + ", " + res.bairro + ", " + res.uf;
       });
     }

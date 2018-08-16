@@ -28,7 +28,7 @@
   </mat-form-field>
 
   <div class="cepContn">
-      <app-cep (updateCep)="updCep($event)" ></app-cep>
+      <app-cep [cep]="cep" (updateCep)="updCep($event)" ></app-cep>
   </div>
   
   <mat-form-field *ngIf="!newClient" class="ipt">

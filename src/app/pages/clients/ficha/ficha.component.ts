@@ -23,8 +23,8 @@ export class FichaComponent implements OnInit {
     var id = this.route.snapshot.params.id;    
     this.appService.getClient(id).then((client) =>{
       this.client = client;    
-      
-      this.cepComp.getEndereco(this.client.cep, (endereco) =>{
+      var cep = this.client.cep ? this.client.cep: "00000000";
+      this.cepComp.getEndereco(cep, (endereco) =>{
         this.endereco = endereco;
       })
     })    

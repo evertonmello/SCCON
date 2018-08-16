@@ -4,26 +4,24 @@
       "nome": "everton",
       "email": "asdasd@asd.com",
       "telefone": "11111111",
-      "cep": "13313530",
-      "status": "true",
+      "status": false,
+      "cep": "33333333",
       "id": "djgvqx30k"
     },
     {
       "nome": "luiz",
       "email": "asdasd@asd.com",
       "telefone": "22222222",
-      "cep": "13313530",
-      "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:54.136Z",
+      "status": false,
+      "cep": "99999999",
       "id": "jjfh25ro9"
     },
     {
       "nome": "maria",
       "email": "asdasd@asd.com",
       "telefone": "33333333",
-      "cep": "13313530",
       "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:55.203Z",
+      "cep": "13313530",
       "id": "fo00y4t06"
     },
     {
@@ -37,10 +35,10 @@
     },
     {
       "nome": "pedro",
-      "email": "asdasd@asd.com",
-      "telefone": "55555555",
-      "cep": "",
+      "email": "asdasd@asd.000",
+      "telefone": "000000000",
       "status": true,
+      "cep": "11111111",
       "id": "wtqr96nys"
     },
     {

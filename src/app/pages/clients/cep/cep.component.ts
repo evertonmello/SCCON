@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnChanges, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder,Validators } from '@angular/forms'
 
 import { AppService } from './../../../services/app.service'
@@ -9,11 +9,12 @@ import { AppService } from './../../../services/app.service'
   templateUrl: './cep.component.html',
   styleUrls: ['./cep.component.scss']
 })
-export class CepComponent implements OnInit {
+export class CepComponent implements OnInit,OnChanges {
  
   endereco;
   formData;
   formbuilder = new FormBuilder()
+  @Input()cep;
   @Output()updateCep = new EventEmitter();
   constructor(private appService:AppService) { }
  
@@ -24,6 +25,14 @@ export class CepComponent implements OnInit {
       Validators.minLength(8),
       Validators.required])
     ]})       
+  }
+
+  ngOnChanges(){
+    if(this.cep){      
+      this.formData.setValue({
+        cep:this.cep
+      })
+    }
   }
 
   onSubmit(formdata){
