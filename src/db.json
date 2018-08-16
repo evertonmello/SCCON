@@ -1,0 +1,164 @@
+{
+  "clients": [
+    {
+      "id": 0,
+      "nome": "a",
+      "email": "a@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 1,
+      "nome": "b",
+      "email": "b@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 2,
+      "nome": "c",
+      "email": "c@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 3,
+      "nome": "d",
+      "email": "d@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 4,
+      "nome": "e",
+      "email": "e@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 213,
+      "nome": "c",
+      "email": "c@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": 64,
+      "nome": "b",
+      "email": "b@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": "bpjgj6c1b",
+      "nome": "b",
+      "email": "b@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": "uxsz66ioz",
+      "nome": "c",
+      "email": "c@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": "a62qd6heo",
+      "nome": "c",
+      "email": "c@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": "q92x2ozrt",
+      "nome": "a",
+      "email": "a@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "id": "uaebq3ad3",
+      "nome": "b",
+      "email": "b@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "9tyidn040"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "9y5ivco0v"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "i25ip670n"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "pvs8iilpk"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "0lo88hd1d"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "vwpdkwvqr"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "ckccigwb8"
+    },
+    {
+      "nome": "asdsaadsad",
+      "email": "asdasd@asd.com",
+      "telefone": "12345678",
+      "cep": "13313530",
+      "id": "j54t41puu"
+    },
+    {
+      "id": "kq64ibxfm",
+      "nome": "b",
+      "email": "b@dsasd.com",
+      "cep": 13313530,
+      "telefone": 12339876,
+      "status": true
+    }
+  ]
+}

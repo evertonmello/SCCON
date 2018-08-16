@@ -1,15 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
-
 import { Router } from '@angular/router';
 
-export interface Client {
-  nome: string;
-  email: string;
-  cep: Number;
-  telefone: Number;
-  status: boolean
-}
+import { AppService } from './../../../services/app.service'
+import { Client } from './../../clients/client';
+
 
 @Component({
   selector: 'search-list',
@@ -23,33 +18,24 @@ export class SearchListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private router:Router) {
-    const users = [
-      {nome:"a", email:"a@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"b", email:"b@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"c", email:"c@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"d", email:"d@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"e", email:"e@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-      {nome:"asddsa", email:"asddsa@dsasd.com",cep: 13313530, telefone:12339876, status: true},
-    ]
-    this.dataSource = new MatTableDataSource(users);
-  }
+  constructor(private router:Router,private appService:AppService) {
 
+  }
+  
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    this.appService.getClients().then((clients) =>{
+      this.dataSource = new MatTableDataSource(clients);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
   }
 
-  editClient(client){
-    console.log(client)
-    this.router.navigate(['/ficha' ]);
+  editClient(id){
+ /*    client.id = Math.random().toString(36).substr(2, 9) 
+    this.appService.saveClients(client).then((res) =>{
+      console.log(res)
+    }) */
+    this.router.navigate(['/ficha/'+id]);
 
   }
 

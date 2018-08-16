@@ -33,6 +33,31 @@ export class AppService {
       .then(this.parseDate)
       .catch();
   }
+  
+  getClients(){   
+      return this.http
+      .get("http://localhost:3000/clients",{})
+      .toPromise()
+      .then(this.parseDate)
+      .catch();
+  }
+
+  getClient(id){
+    return this.http
+    .get("http://localhost:3000/clients/"+id,{})
+    .toPromise()
+    .then(this.parseDate)
+    .catch();
+  }
+
+
+  saveClients(client){
+    return this.http
+    .post("http://localhost:3000/clients",client)
+    .toPromise()
+    .then(this.parseDate)
+    .catch();
+  }
 
   parseDate(data){
     var endereco = data;

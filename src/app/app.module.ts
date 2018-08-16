@@ -26,7 +26,9 @@ import { FichaComponent } from './pages/clients/ficha/ficha.component'
 const appRoutes: Routes = [
   { path: 'listagem', component: ClientsComponent },
   { path: 'cadastro', component: FormComponent },
+  { path: 'cadastro/:id', component: FormComponent },
   { path: 'ficha', component: FichaComponent },
+  { path: 'ficha/:id', component: FichaComponent },
   { path: '',      component: HomeComponent }
 ];
 
