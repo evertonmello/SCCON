@@ -27,6 +27,11 @@ export class FormComponent implements OnInit {
   emailFormControl;
   client;
   newClient = true;
+  status=[
+    {value:true, view:'Ativo'},
+    {value:false, view:'Inativo'}
+  ]
+
   constructor( private formbuilder:FormBuilder, private appService:AppService,private route: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -80,6 +85,7 @@ export class FormComponent implements OnInit {
   }
   
   updateClient(){
+    console.log(this.formData)
     if(this.formData.valid){      
       var clientId = this.client.id;
     

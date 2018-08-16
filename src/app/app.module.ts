@@ -3,20 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatTableModule,
-        MatPaginatorModule,
-        MatSortModule,
-        MatFormFieldModule,
-        MatButtonModule}  from '@angular/material';
-import {MatInputModule} from '@angular/material/input';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 import {NgxMaskModule} from 'ngx-mask'
-import {MatSelectModule} from '@angular/material/select';
 
-
+import { MaterialMdl } from './material.module'
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -49,24 +40,16 @@ const appRoutes: Routes = [
     FichaComponent,
     CepComponent,
   ],
-  imports: [
-    MatMenuModule,
+  imports: [    
     BrowserModule,
     BrowserModule,
-    MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
-    MatProgressBarModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
+    MaterialMdl,
     BrowserAnimationsModule,
     NgxMaskModule.forRoot(),
     RouterModule.forRoot(

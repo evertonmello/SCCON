@@ -30,14 +30,15 @@
   <div class="cepContn">
       <app-cep (updateCep)="updCep($event)" ></app-cep>
   </div>
-
-  <mat-form-field class="ipt">
-      <mat-select placeholder="Status" [value]="formData.controls.status" >
-        <mat-option>Ativo</mat-option>
-        <mat-option>Inativo</mat-option>
+  
+  <mat-form-field *ngIf="!newClient" class="ipt">
+      <mat-select formControlName="status" placeholder="Status" [(value)]="selected">
+        <mat-option *ngFor="let item of status" [value]="item.value">
+            {{item.view}}
+        </mat-option>
       </mat-select>
-  </mat-form-field> 
+  </mat-form-field>
 
-  <button *ngIf="!newClient"  mat-button  type="button" (click)="updateClient()" class="btnCadt">Alterar</button>
-  <button *ngIf="newClient" mat-button  type="submit" class="btnCadt">Cadastrar</button>
+  <button *ngIf="!newClient" mat-button type="button" (click)="updateClient(status)" class="btnCadt">Salvar</button>
+  <button *ngIf="newClient"mat-button type="submit" class="btnCadt">Cadastrar</button>
 </form>

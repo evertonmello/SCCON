@@ -4,9 +4,7 @@
       "nome": "qweeqwqwe",
       "email": "asdasd@asd.com",
       "telefone": "112322133",
-      "cep": "13313530",
-      "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:48.682Z",
+      "status": "true",
       "id": "djgvqx30k"
     },
     {
@@ -40,9 +38,7 @@
       "nome": "qweeqwqwe",
       "email": "asdasd@asd.com",
       "telefone": "112322133",
-      "cep": "13313530",
       "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:56.135Z",
       "id": "wtqr96nys"
     },
     {
