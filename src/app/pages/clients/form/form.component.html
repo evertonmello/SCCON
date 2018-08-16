@@ -1,8 +1,8 @@
-<h2 class="title">Cadastro de cliente</h2>
+<h2  class="title mat-display-1">Cadastro de cliente</h2>
 
 <form [formGroup]="formData" (ngSubmit)="onSubmit(formData)" class="form-container">
   <mat-form-field class="ipt">
-    <input formControlName="nome" matInput placeholder="Nome">
+    <input formControlName="nome" matInput placeholder="Nome" >
   </mat-form-field>
 
   <mat-form-field class="ipt">
@@ -18,7 +18,7 @@
   </mat-form-field>
 
   <mat-form-field class="ipt">
-    <input formControlName="telefone" matInput type="tel" placeholder="Telefone">
+    <input formControlName="telefone" matInput type="tel" placeholder="Telefone" mask="00000-0000" >
     <mat-error *ngIf="!formData.controls.telefone.valid && !formData.controls.telefone.errors['required']">
         O telefone digitado é invalido
     </mat-error>
@@ -28,14 +28,16 @@
   </mat-form-field>
 
   <div class="cepContn">
-    <mat-form-field class="ipt">
-      <input formControlName="cep" matInput type="number" placeholder="CEP">
-      <mat-error *ngIf="!formData.controls.cep.valid && !formData.controls.cep.errors['required']">
-          O cep deve conter <strong>8</strong> números
-      </mat-error>
-    </mat-form-field>
-    <mat-label class="lblCep">{{endereco}}</mat-label>
+      <app-cep (updateCep)="updCep($event)" ></app-cep>
   </div>
+
+  <mat-form-field class="ipt">
+      <mat-select placeholder="Status" [value]="formData.controls.status" >
+        <mat-option>Ativo</mat-option>
+        <mat-option>Inativo</mat-option>
+      </mat-select>
+  </mat-form-field> 
+
   <button *ngIf="!newClient"  mat-button  type="button" (click)="updateClient()" class="btnCadt">Alterar</button>
   <button *ngIf="newClient" mat-button  type="submit" class="btnCadt">Cadastrar</button>
 </form>

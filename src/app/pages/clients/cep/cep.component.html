@@ -1,0 +1,11 @@
+<form [formGroup]="formData" (ngSubmit)="onSubmit(formData)">
+  <mat-form-field class="ipt">
+    <input formControlName="cep" matInput type="text" placeholder="Cep" mask="00000-000">
+    <mat-error *ngIf="!formData.controls.cep.valid && !formData.controls.cep.errors['required']">
+      O cep deve conter
+      <strong>8</strong> números
+    </mat-error>
+  </mat-form-field>
+  <button mat-button  type="submit">Buscar Cep</button>
+  <mat-label class="lblCep">{{endereco}}</mat-label>
+</form>

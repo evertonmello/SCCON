@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormBuilder, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import { Router,ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { AppService } from './../../../services/app.service'
 import { Client } from './../../clients/client';
@@ -21,6 +21,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class FormComponent implements OnInit {
 
+  cep;
   endereco;
   formData;
   emailFormControl;
@@ -43,8 +44,8 @@ export class FormComponent implements OnInit {
     this.formData = this.formbuilder.group({
       nome:['', Validators.required],
       email:['', Validators.compose([Validators.required,Validators.email])],
-      telefone:['', Validators.compose([Validators.required,Validators.pattern('^[0-9]{8,9}$')])],
-      cep:['',Validators.compose([Validators.required, Validators.pattern('^[0-9]{8,8}$')])]
+      telefone:['', Validators.compose([Validators.required,Validators.pattern('^[0-9]{8,9}$')])],     
+      status:[''] 
     });   
   }
 
@@ -55,19 +56,18 @@ export class FormComponent implements OnInit {
         nome:client.nome,
         email:client.email,
         telefone:client.telefone,
-        cep:client.cep
+        status:client.status
       });
     }) 
   }
 
   onSubmit(form){
     if(form.valid){
-      this.appService.getEndereco(form.value.cep).then((res) =>{
-        this.endereco = res.logradouro + ", " + res.bairro + ", " + res.uf;
-      });
-
       var newClient = new Client();
       newClient = form.value
+      newClient.cep = this.cep;
+      newClient.status = true;
+      newClient.dataDeCadastro = new Date()
       newClient.id = Math.random().toString(36).substr(2, 9)       
       this.client = newClient;
 
@@ -75,8 +75,12 @@ export class FormComponent implements OnInit {
     }
   }
 
+  updCep(cep){
+    this.cep = cep
+  }
+  
   updateClient(){
-    if(this.formData.valid){
+    if(this.formData.valid){      
       var clientId = this.client.id;
     
       this.appService.updateClients(clientId, this.formData.value).then((res) =>{

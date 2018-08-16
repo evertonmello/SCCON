@@ -4,6 +4,7 @@ export class Client {
     email: string;
     cep: Number;
     telefone: Number;
-    status: boolean
+    status: boolean;
+    dataDeCadastro: Date
   }
   

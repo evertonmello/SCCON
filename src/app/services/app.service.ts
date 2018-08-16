@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class AppService {
 
-  
+  defaultUrl = "http://localhost:3000/clients/";
   constructor(private http: HttpClient) {     
   };
 
@@ -36,7 +36,7 @@ export class AppService {
   
   getClients(){   
       return this.http
-      .get("http://localhost:3000/clients",{})
+      .get(this.defaultUrl,{})
       .toPromise()
       .then(this.parseDate)
       .catch();
@@ -44,7 +44,7 @@ export class AppService {
 
   getClient(id){
     return this.http
-    .get("http://localhost:3000/clients/"+id,{})
+    .get(this.defaultUrl+id,{})
     .toPromise()
     .then(this.parseDate)
     .catch();
@@ -53,7 +53,7 @@ export class AppService {
 
   saveClients(client){
     return this.http
-    .post("http://localhost:3000/clients",client)
+    .post(this.defaultUrl,client)
     .toPromise()
     .then(this.parseDate)
     .catch();
@@ -62,7 +62,7 @@ export class AppService {
 
   updateClients(id,client){
     return this.http
-    .put("http://localhost:3000/clients/"+id,client)
+    .put(this.defaultUrl +id,client)
     .toPromise()
     .then(this.parseDate)
     .catch();

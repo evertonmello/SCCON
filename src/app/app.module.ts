@@ -12,6 +12,10 @@ import {MatTableModule,
         MatFormFieldModule,
         MatButtonModule}  from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {NgxMaskModule} from 'ngx-mask'
+import {MatSelectModule} from '@angular/material/select';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -21,7 +25,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchListComponent } from './pages/clients/search-list/search-list.component';
 import { FormComponent } from './pages/clients/form/form.component';
 import { AppService } from './services/app.service';
-import { FichaComponent } from './pages/clients/ficha/ficha.component'
+import { FichaComponent } from './pages/clients/ficha/ficha.component';
+import { CepComponent } from './pages/clients/cep/cep.component'
 
 const appRoutes: Routes = [
   { path: 'listagem', component: ClientsComponent },
@@ -42,13 +47,16 @@ const appRoutes: Routes = [
     SearchListComponent,
     FormComponent,
     FichaComponent,
+    CepComponent,
   ],
   imports: [
     MatMenuModule,
     BrowserModule,
     BrowserModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     FormsModule,
+    MatProgressBarModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserModule,
@@ -60,6 +68,7 @@ const appRoutes: Routes = [
     MatPaginatorModule,
     MatSortModule,
     BrowserAnimationsModule,
+    NgxMaskModule.forRoot(),
     RouterModule.forRoot(
       appRoutes
     )  
