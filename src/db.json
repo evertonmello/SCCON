@@ -1,72 +1,38 @@
 {
   "clients": [
     {
-      "nome": "everton",
-      "email": "asdasd@asd.com",
-      "telefone": "11111111",
+      "nome": "aaa",
+      "email": "asdasdsa@asd.com",
+      "telefone": "122122222",
       "status": false,
-      "cep": "33333333",
-      "id": "djgvqx30k"
+      "cep": "12323211",
+      "id": "a2m8v1rqg"
     },
     {
-      "nome": "luiz",
-      "email": "asdasd@asd.com",
-      "telefone": "22222222",
-      "status": false,
-      "cep": "99999999",
-      "id": "jjfh25ro9"
-    },
-    {
-      "nome": "maria",
-      "email": "asdasd@asd.com",
-      "telefone": "33333333",
+      "nome": "eee",
+      "email": "asdasdsa@asd.com",
+      "telefone": "122122222",
       "status": true,
-      "cep": "13313530",
-      "id": "fo00y4t06"
+      "cep": "12323211",
+      "dataDeCadastro": "2018-08-16T23:41:07.983Z",
+      "id": "6jwnq8tse"
     },
     {
-      "nome": "jose",
-      "email": "asdasd@asd.com",
-      "telefone": "44444444",
-      "cep": "13313530",
+      "nome": "iii",
+      "email": "asdasdsa@asd.com",
+      "telefone": "122127777",
       "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:55.919Z",
-      "id": "xigqwz081"
+      "cep": "12323211",
+      "id": "aae7af8c3"
     },
     {
-      "nome": "pedro",
-      "email": "asdasd@asd.000",
-      "telefone": "000000000",
+      "nome": "oo",
+      "email": "asdasdsa@asd.com",
+      "telefone": "122122222",
       "status": true,
-      "cep": "11111111",
-      "id": "wtqr96nys"
-    },
-    {
-      "nome": "Andre",
-      "email": "asdasd@asd.com",
-      "telefone": "112322133",
-      "cep": "13313530",
-      "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:56.286Z",
-      "id": "3ti7q2zak"
-    },
-    {
-      "nome": "matheus",
-      "email": "asdasd@asd.com",
-      "telefone": "112322133",
-      "cep": "13313530",
-      "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:56.451Z",
-      "id": "oqerubu03"
-    },
-    {
-      "nome": "lucas",
-      "email": "asdasd@asd.com",
-      "telefone": "112322133",
-      "cep": "13313530",
-      "status": true,
-      "dataDeCadastro": "2018-08-16T17:07:56.652Z",
-      "id": "wpk6znqvv"
+      "cep": "12323211",
+      "dataDeCadastro": "2018-08-16T23:41:08.748Z",
+      "id": "bozalnii8"
     }
   ]
 }

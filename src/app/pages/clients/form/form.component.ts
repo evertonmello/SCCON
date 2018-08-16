@@ -84,7 +84,6 @@ export class FormComponent implements OnInit {
 
   updCep(cep){
     this.cep = cep
-    console.log(this.cep)
   }
   
   updateClient(){
