@@ -4,15 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatTableModule,
         MatPaginatorModule,
         MatSortModule,
         MatFormFieldModule,
-        MatInputModule,
         MatButtonModule}  from '@angular/material';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';

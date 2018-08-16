@@ -1,3 +1,41 @@
-<p>
-  form works!
-</p>
+<h1 class="title">Cadastro de cliente</h1>
+
+<form [formGroup]="formData" (ngSubmit)="onSubmit(formData)" class="form-container">
+  <mat-form-field class="ipt">
+    <input formControlName="nome" matInput placeholder="Nome">
+  </mat-form-field>
+
+  <mat-form-field class="ipt">
+    <input matInput placeholder="email" formControlName="email" [errorStateMatcher]="matcher">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="formData.controls.email.hasError('email') && !formData.controls.email.hasError('required')">
+      Insira um e-mail válido
+    </mat-error>
+    <mat-error *ngIf="formData.controls.email.hasError('required')">
+      O campo e-mail
+      <strong>Obrigatório</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="ipt">
+    <input formControlName="telefone" matInput type="tel" placeholder="Telefone">
+    <mat-error *ngIf="!formData.controls.telefone.valid && !formData.controls.telefone.errors['required']">
+        O telefone digitado é invalido
+    </mat-error>
+    <mat-error *ngIf="formData.controls.telefone.errors && formData.controls.telefone.errors['required']">
+        O campo telefone é obrigatório
+    </mat-error>
+  </mat-form-field>
+
+  <div class="cepContn">
+    <mat-form-field class="ipt">
+      <input formControlName="cep" matInput type="number" placeholder="CEP">
+      <mat-error *ngIf="!formData.controls.cep.valid && !formData.controls.cep.errors['required']">
+          O cep deve conter <strong>8</strong> números
+      </mat-error>
+    </mat-form-field>
+    <mat-label class="lblCep">{{endereco}}</mat-label>
+  </div>
+
+  <button mat-button  type="submit" class="btnCadt">Cadastrar</button>
+</form>
