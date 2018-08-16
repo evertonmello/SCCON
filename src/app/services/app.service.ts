@@ -34,8 +34,6 @@ export class AppService {
       .catch();
   }
 
-
-
   parseDate(data){
     var endereco = data;
     return endereco;

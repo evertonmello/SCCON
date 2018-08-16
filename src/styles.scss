@@ -14,3 +14,15 @@ h1,h2,p{
     max-width: 70%;
     margin: auto;
 }
+
+
+.btnCadt{
+    transition: 0.3s;
+    float: right;
+    background-color: #088C45;
+}
+
+.btnCadt:hover{
+    transition: 0.3s;
+    background-color:rgb(8, 130, 69)
+}

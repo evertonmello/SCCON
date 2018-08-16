@@ -20,12 +20,13 @@ import { ClientsComponent } from './pages/clients/clients.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchListComponent } from './pages/clients/search-list/search-list.component';
 import { FormComponent } from './pages/clients/form/form.component';
-import { CepComponent } from './pages/clients/cep/cep.component';
-import { AppService } from './services/app.service'
+import { AppService } from './services/app.service';
+import { FichaComponent } from './pages/clients/ficha/ficha.component'
 
 const appRoutes: Routes = [
   { path: 'listagem', component: ClientsComponent },
   { path: 'cadastro', component: FormComponent },
+  { path: 'ficha', component: FichaComponent },
   { path: '',      component: HomeComponent }
 ];
 
@@ -38,7 +39,7 @@ const appRoutes: Routes = [
     HomeComponent,
     SearchListComponent,
     FormComponent,
-    CepComponent,
+    FichaComponent,
   ],
   imports: [
     MatMenuModule,
