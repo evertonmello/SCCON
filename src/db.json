@@ -4,6 +4,7 @@
       "nome": "everton",
       "email": "asdasd@asd.com",
       "telefone": "11111111",
+      "cep": "13313530",
       "status": "true",
       "id": "djgvqx30k"
     },
@@ -38,6 +39,7 @@
       "nome": "pedro",
       "email": "asdasd@asd.com",
       "telefone": "55555555",
+      "cep": "",
       "status": true,
       "id": "wtqr96nys"
     },
